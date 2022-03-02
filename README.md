@@ -127,3 +127,12 @@ This repository contains a parser library for Chearmyp which represents the sour
 
 ## Lexer
 The lexer has been forked. Visit the repository of the lexer for more details.
+
+## Origin
+The repository was based from [`filled_bare_metal`] branch of [Feo Template].
+
+### Author
+Coded by Kenneth Trecy Tobias.
+
+[`filled_bare_metal`]: https://github.com/KennethTrecy/feo_template/tree/filled_bare_metal
+[Feo Template]: https://github.com/KennethTrecy/feo_template
