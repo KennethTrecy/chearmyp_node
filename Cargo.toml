@@ -19,4 +19,5 @@ features = ["range_boundary", "vec_boundary_collection"]
 
 [features]
 default = []
-no_std = []
+no_std = ["abstract_chearmyp_boundary/no_std", "abstract_chearmyp_node/no_std"]
+assertable_node = ["abstract_chearmyp_node/assertable_node_kind"]
