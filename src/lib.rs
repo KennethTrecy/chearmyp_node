@@ -39,7 +39,15 @@ mod abstracts {
 		AbstractNodeQueue,
 		AbstractNode,
 		SimpleAbstractNode,
-		DynamicAbstractNode
+		DynamicAbstractNode,
+
+		AbstractSimplexNode,
+		AbstractComplexNode,
+		AbstractAttacherNode,
+		AbstractLineCommentNode,
+		AbstractBlockCommentNode,
+		AbstractLineOthertongueNode,
+		AbstractBlockOthertongueNode
 	};
 }
 
