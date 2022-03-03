@@ -53,3 +53,77 @@ where
 		Node::Complex(name, attachers, nodes)
 	}
 }
+
+#[cfg(test)]
+mod t {
+	use crate::native::{Range, Vec, VecDeque};
+	use super::{SimpleAbstractNode, Node, NodeKind};
+
+	type T = Range<u8>;
+	type U = Vec<T>;
+	type V = Node<T, U>;
+	type W = VecDeque<V>;
+
+	#[test]
+	fn can_create_simplex_and_confirm() {
+		let simplex = V::new_simplex(0..1, W::new());
+
+		let kind = simplex.kind();
+
+		assert_eq!(kind, NodeKind::Simplex);
+	}
+
+	#[test]
+	fn can_create_complex_and_confirm() {
+		let complex = V::new_complex(2..3, W::new(), W::new());
+
+		let kind = complex.kind();
+
+		assert_eq!(kind, NodeKind::Complex);
+	}
+
+	#[test]
+	fn can_create_attacher_and_confirm() {
+		let attacher = V::new_attacher(4..5, 6..7, U::new());
+
+		let kind = attacher.kind();
+
+		assert_eq!(kind, NodeKind::Attacher);
+	}
+
+	#[test]
+	fn can_create_line_comment_and_confirm() {
+		let line_comment = V::new_line_comment(8..9);
+
+		let kind = line_comment.kind();
+
+		assert_eq!(kind, NodeKind::LineComment);
+	}
+
+	#[test]
+	fn can_create_block_comment_and_confirm() {
+		let block_comment = V::new_block_comment(U::new());
+
+		let kind = block_comment.kind();
+
+		assert_eq!(kind, NodeKind::BlockComment);
+	}
+
+	#[test]
+	fn can_create_line_othertongue_and_confirm() {
+		let line_othertongue = V::new_line_othertongue(10..11);
+
+		let kind = line_othertongue.kind();
+
+		assert_eq!(kind, NodeKind::LineOthertongue);
+	}
+
+	#[test]
+	fn can_create_block_othertongue_and_confirm() {
+		let block_othertongue = V::new_block_othertongue(U::new());
+
+		let kind = block_othertongue.kind();
+
+		assert_eq!(kind, NodeKind::BlockOthertongue);
+	}
+}

@@ -13,14 +13,22 @@ extern crate alloc;
 
 mod native {
 	#[cfg(feature = "no_std")]
-	pub use alloc::collections::VecDeque;
+	pub use alloc::{
+		vec::Vec,
+		collections::VecDeque
+	};
 
 	#[cfg(feature = "no_std")]
-	pub use core::cmp::PartialEq;
+	pub use core::{
+		ops::Range,
+		cmp::PartialEq
+	};
 
 	#[cfg(not(feature = "no_std"))]
 	pub use std::{
+		vec::Vec,
 		cmp::PartialEq,
+		ops::Range,
 		collections::VecDeque
 	};
 }
