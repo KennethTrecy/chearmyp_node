@@ -1,9 +1,24 @@
 # Chearmyp Node
 A concrete implementation of nodes for Chearmyp language.
 
+Add it to the dependencies:
+```
+[dependencies.chearmyp_node]
+git = "https://github.com/KennethTrecy/chearmyp_node"
+tag = "v0.6.0"
+```
+
+You may also activate all the features:
+```
+[dependencies.chearmyp_node]
+git = "https://github.com/KennethTrecy/chearmyp_node"
+tag = "v0.6.0"
+features = ["no_std", "assertable_node"]
+```
+
 ## Origin
 It was in a repository with the parser library. Yet it has been forked as some possible use cases
-may not need as parser.
+may not need a parser.
 
 The repository uses the template based from [`filled_bare_metal`] branch of [Feo Template].
 
