@@ -20,7 +20,7 @@ features = ["no_std", "assertable_node"]
 It was in a repository with the [parser library]. Yet it has been forked as some possible use cases
 may not need a parser.
 
-Som parts of the repository uses the template based from [`filled_bare_metal`] branch of [Feo
+Some parts of the repository uses the template based from [`filled_bare_metal`] branch of [Feo
 Template].
 
 ## Nodes
