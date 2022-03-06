@@ -28,7 +28,7 @@ The nodes here have been implemented as enumerations. The attacher collections a
 `VecDeque`s.
 
 ### Author
-Coded by Kenneth Trecy Tobias.
+Chearmyp Node was created by Kenneth Trecy Tobias.
 
 [`filled_bare_metal`]: https://github.com/KennethTrecy/feo_template/tree/filled_bare_metal
 [Feo Template]: https://github.com/KennethTrecy/feo_template
