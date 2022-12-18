@@ -1,4 +1,4 @@
-use crate::native::{PartialEq, VecDeque};
+use crate::native::VecDeque;
 use crate::abstracts::{
 	AbstractBoundary,
 	AbstractBoundaryCollection,
@@ -8,10 +8,10 @@ use crate::node_kind::NodeKind;
 use super::Node;
 
 impl<T, U, V>
-SimpleAbstractNode<T, U, V, U, Node<U, V>, VecDeque<Node<U, V>>, VecDeque<Node<U, V>>>
+SimpleAbstractNode<T, U, V, Node<U, V>, VecDeque<Node<U, V>>, VecDeque<Node<U, V>>>
 for Node<U, V>
 where
-	U: AbstractBoundary<T> + PartialEq,
+	U: AbstractBoundary<T>,
 	V: AbstractBoundaryCollection<T, U> {
 	fn kind(&self) -> NodeKind {
 		match self {
