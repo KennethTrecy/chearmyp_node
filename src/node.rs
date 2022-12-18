@@ -1,7 +1,7 @@
 use crate::native::VecDeque;
 
 /// Contains the nodes used for parsing.
-#[cfg_attr(feature = "assertable_node", derive(Debug, PartialEq))]
+#[cfg_attr(any(feature = "assertable_node", test), derive(Debug, PartialEq))]
 pub enum Node<T, U> {
 	LineComment(T),
 	BlockComment(U),
