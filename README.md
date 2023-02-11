@@ -14,14 +14,14 @@ Add it to the dependencies:
 ```
 [dependencies.chearmyp_node]
 git = "https://github.com/KennethTrecy/chearmyp_node"
-tag = "v0.7.0"
+tag = "v1.0.0"
 ```
 
 You may also activate all the features:
 ```
 [dependencies.chearmyp_node]
 git = "https://github.com/KennethTrecy/chearmyp_node"
-tag = "v0.7.0"
+tag = "v1.0.0"
 features = ["no_std", "assertable_node"]
 ```
 
